@@ -1,0 +1,84 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.montserrat-alternates-regular {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title {
+  font-size: 70px;
+  line-height: 78px;
+  font-style: regular;
+  margin: 1em 0;
+  text-align: center;
+  color: #515076;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 630px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 25px;
+}
+
+.photo {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
+
+.skin-tag {
+  font-size: 20px;
+  line-height: 27px;
+  display:block;
+  text-transform: uppercase;
+  font-style: bold;
+  color: #515076;
+}
+
+.product {
+  font-size: 16px;
+  line-height: 24px;
+  color: #A5A3B9;
+  }
+
+.prod-effect,
+.prod-comp,
+.ingred_list {
+  font-size: 15px;
+  line-height: 25px;
+  font-style: regular;
+  color: #515076;
+}
+
+.prod-price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color:#515076;
+}
+.prod-price1 {
+  font-size: 20px;
+  line-height: 24px;
+  color:#515076;
+}
+
+.button-to-buy{
+  background-color: #515076; 
+  color: #fff;
+  border: 1px solid #515076;
+  border-radius: 18px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin : 5px;
+}
