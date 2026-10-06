@@ -1,0 +1,10 @@
+.button-to-buy{
+  background-color: #515076; 
+  color: #fff;
+  border: 1px solid #515076;
+  border-radius: 18px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin : 5px;
+  cursor: pointer;
+}
