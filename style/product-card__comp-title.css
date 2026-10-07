@@ -1,6 +1,9 @@
-.product-card__comp-title{
-  font-size: 15px;
+.product-card__comp-title {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 1px;
   line-height: 18px;
   margin-left: 5px;
-  color: #515076;
+  padding: 5px;
+  color:#515076;
 }
