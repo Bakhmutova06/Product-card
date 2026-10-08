@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1110px) {
+  .product-list{
+    display:block
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
