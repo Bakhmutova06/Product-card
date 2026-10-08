@@ -6,4 +6,5 @@
   gap: 45px;
   justify-content: center;
   max-width: 1210px;
+  position: relative;
 }
