@@ -1,0 +1,70 @@
+//const mainTitle = 'catalog__card' //camelCase слова разделяются с помощью заглавной буквы без пробела
+//const MAINTITLE = 'catalog__card' //upperCase слова пишутся заглавными буквами полностью
+//const main_title = 'catalog__card'//snake_case слова пишутся через нижнее подчеркивание
+//const g = document//с помощью ключевого слова document можем управлять дом-деревом этой страницы html
+//const g = document.querySelector()// функция для поиска элемента в дереве в html файле
+//есть варианты поиска через #id, через <tag>, .class.
+//const - способ объявить неизменяемую переменную
+
+
+
+const INITIAL_CLASSES = ['border-blue', 'text-red', 'bg-yellow'];
+let availableClasses = [...INITIAL_CLASSES];
+let added = [];
+
+// Получаем элементы из DOM
+const active = document.getElementById('active');// кнопка Выбери свой продукт
+const addButton = document.getElementById('add');// кнопка Добавить офомление
+const removeButton = document.getElementById('remove');// кнопка Убрать оформление
+const toggleButton = document.getElementById('toggle');// кнопка Красиво исчезнуть
+const resetButton = document.getElementById('reset');// кнопка Верни как было!
+
+// 1. Добавление класса при помощи classList.add
+function handleAddClass() {
+  if (availableClasses.length) {
+const nextClass = availableClasses.shift();
+  active.classList.add(nextClass); // Использование classList. 
+  // Этот метод используется для добавления класса к элементу. 
+  // В качестве аргументов нужно передавать строку с именем класса.
+    added.push(nextClass);
+  }
+}
+addButton.addEventListener('click', handleAddClass); 
+//Добавляет элементу действие, которое будет выполнено после срабатывания события. 
+//Например, на клик мышки или нажатие клавиши.
+
+// 2. Удаление класса при помощи classList.remove
+  function handleRemoveClass() {
+  if (added.length) {
+const nextClass = added.pop();
+  target.classList.remove(nextClass); // Использование classList
+    availableClasses.unshift(nextClass);
+    }
+}
+removeButton.addEventListener('click', handleRemoveClass);
+
+// 3. Переключение класса при помощи classList.toggle
+  let visible = true;
+    function handleToggleClick() {
+active.classList.toggle('fade'); // Использование classList
+  visible = !visible;
+    toggleButton.textContent = visible ? 'Красиво исчезнуть' : 'Красиво появиться';
+}
+  toggleButton.addEventListener('click', handleToggleClick);
+
+  // 4. сброс стилей
+  function handleResetClick() {
+    added = [];
+       availableClasses = [...INITIAL_CLASSES];
+            
+// Удаляем все классы оформления
+active.classList.remove(...INITIAL_CLASSES); // Использование classList
+            
+//  возвращаем видимость элемента
+active.classList.remove('fade'); // Использование classList
+  visible = true;
+toggleButton.textContent = 'Красиво исчезнуть';
+            
+console.log('Стили успешно сброшены в исходное состояние');
+}
+resetButton.addEventListener('click', handleResetClick);
