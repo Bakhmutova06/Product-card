@@ -1,0 +1,39 @@
+/* начальные стили для заголовка */
+.title.basic {
+    transition: all 0.5s ease; /* Для исчезновения и появления */
+}
+
+/*смена стиля кнопки*/
+.title.decorated {
+    color: #ff4757;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/*Стили для Красиво исчезнуть*/
+.title.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+}
+
+/* Исходное состояние заголовка (плавность переходов) */
+#active {
+    transition: all 0.5s ease-in-out;
+    color: #
+    font-size: 32px;
+}
+
+/* Эффект для кнопки "Добавить оформление" */
+#active.decorated {
+    color: #ff4757;                              /* Меняем цвет на красный */
+    transform: scale(1.15);                       /* появление*/
+    text-shadow: 2px 4px 10px rgba(255, 71, 87, 0.3); /* тень */
+}
+
+/* Эффект для кнопки "Красиво исчезнуть" */
+#active.hidden {
+    opacity: 0;                       /* уходит в прозрачный */
+    transform: translateY(-30px);     /* двигаем вверх, эффект улетания */
+    pointer-events: none;             /* Чтобы по скрытому тексту нельзя было кликнуть */
+}
