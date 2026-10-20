@@ -6,7 +6,6 @@ const blueSky = '#C6E6FE';
 
 changeColorAllCardsButton.addEventListener('click', () => {
   catalogCards.forEach((card) => card.style.backgroundColor = blueSky)
-  card.style.backgroundColor = blueSky
   });
   //catalogСard.style.backgroundColor = '#C6E6FE';
 
@@ -62,6 +61,10 @@ if (mainHeader) {
     console.log(event.target.textContent.trim());
   });
 }
+
+
+
+
 
 
 
