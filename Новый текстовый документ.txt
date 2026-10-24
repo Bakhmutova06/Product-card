@@ -557,8 +557,7 @@ const books = [
 
 const newArray = books.filter(book)
 
-export const comm
-const userEmail = 
+
 
 Фильтр это метод массива, который принимает какое-либо условие.
 На основе этого условия решает будет ли элемент в новом массиве.

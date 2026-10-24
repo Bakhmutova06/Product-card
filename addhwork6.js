@@ -31,31 +31,31 @@ age = 21;
 const неизменяемая переменная, по этой причине вызовет ошибку
 
 11. Найдите ошибку:
-    const user name = 'Amina'; /*неверно! название переменной пишется слитно и применяется один из инструментов 
+    const user name = 'Amina'; неверно! название переменной пишется слитно и применяется один из инструментов 
     написания названий, например camelCase
     const userName = 'Amina'; 
     const USERNAME = 'Amina'; upperCase
-    const user_name = 'Amina'; snake_case*/
+    const user_name = 'Amina'; snake_case
 
 12. Найдите ошибку:
-    const 1name = 'Amina'; /*неверно!с цифры начинать именовать нельзя
-    const name1 = 'Amina'; верно, после названия писать цифру можно*/
+    const 1name = 'Amina'; неверно!с цифры начинать именовать нельзя
+    const name1 = 'Amina'; верно, после названия писать цифру можно
 
 13. Определите тип данных:
 const name = 'Amina';
-console.log(typeof name); /*string(строка)*/
+console.log(typeof name); string(строка)
 
 14. Определите тип данных:
 const age = 20; тип данных "число" number
-console.log(typeof age); /*тип данных "число" number*/
+console.log(typeof age); тип данных "число" number
 
 15. Определите тип данных:
 const isOnline = true; 
-console.log(typeof isOnline); /*тип данных boolean*/
+console.log(typeof isOnline); тип данных boolean
 
 16. Определите тип данных:
 const price = '5000'; 
-console.log(typeof price); /*"string" потому что в кавычках*/
+console.log(typeof price); /*"string" потому что в кавычках
 
 17. Определите тип данных:
 const value = false; 
@@ -63,7 +63,7 @@ console.log(typeof value);тип данных boolean
 
 18. Что находится в переменной value?
 let value;
-/*Значение не присвоено, будет не найдено*/ */
+Значение не присвоено, будет не найдено
 
 
 19. Определите результат выражения: true или false.
@@ -116,20 +116,26 @@ if (age >= 18) {
 } else {
   console.log('Вход запрещён');
 }
+  Вывод: Вход запрещен, потому что условие для входа разрешен больше или равно 18
 
 30. Допишите код:
 const temperature = 30;
 
 if (temperature > 25) {
-  // здесь должен быть console.log
+  console.log('Жарко');
 } else {
-  // здесь должен быть console.log
+  console.log('Не жарко');
 }
 Если температура больше 25, вывести "Жарко", иначе — "Не жарко".
 
 31. Напишите условие самостоятельно.
 Есть:
 const age = 19;
+if (age >=18) {
+  console.log('Совершненнолетний')
+} else {
+  console.log('Несоверщеннолетний')
+}
 Если возраст 18 или больше, вывести:
 Совершеннолетний
 Иначе:
@@ -139,12 +145,22 @@ const age = 19;
 const score = 80;
 Если score >= 60, вывести "Зачёт", иначе — "Не зачёт".
 
+Вывод: Зачёт, потому что условие зачёта больше или равно 60
+
 33. Есть:
 const password = '12345';
 Если пароль равен '12345', вывести:
 Добро пожаловать
 Иначе:
 Неверный пароль
+
+const password = '12345';
+if (password === '12345') {
+  console.log('Добро пожаловать')
+} else {
+  console.log('Неверный пароль')
+  }
+
 
 34. Определите результат:
 const isOnline = true;
@@ -154,6 +170,8 @@ if (isOnline) {
 } else {
   console.log('Пользователь офлайн');
 }
+
+Если true, то да, 'пользователь онлайн', действительно так.
 
 35. Определите результат:
 const hasTicket = false;
@@ -177,9 +195,11 @@ if (age >= 18) {
 37.. Найдите синтаксическую ошибку:
 const age = 18;
 
-if age >= 18 {
+if (age >= 18) {
   console.log('Можно');
-}
+} else {
+  console.log('Нельзя')
+  }
 Исправьте код.
 
 38. Найдите ошибку:

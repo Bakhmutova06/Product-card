@@ -9,6 +9,9 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newArray = numbers.slice(4, 10)
 console.log(newArray)
 
+const fromFive = numbers.filter(num => num > 5);
+console.log(fromFive);
+
 
 //3. Создайте массив строк, относящихся к  мебели, проверьте, есть ли в массиве какая-то определенная сущность.
 
@@ -43,3 +46,31 @@ console.log("Гостинная:", livingRoomFurniture);
 // Переворачиваем второй массив
 reverseArray(bedroomFurniture);
 console.log("Спальня:", bedroomFurniture); 
+
+//Уровень2:
+//5. Добавьте файл comment.js, в нем создайте константу и в него поместите первые 10 объектов этого массива . 
+// Данный массив представляет собой пример комментариев в соц. сети, поэтому переменная должна быть названа по смыслу. 
+// Не забудьте удалить квадратные кавычки у ключей объектов (можно использовать Chat GPT, что бы не делать это вручную)
+
+
+//6. Сделайте константу экспортируемой, добавив перед «const» ключевое слово «экспорт». 
+//Таким образом мы сможем внедрить переменную из comment.js в homework-9.js и работать с ней. 
+//Когда мы введем название переменной, мы предлагаем импортировать ее — так и делаем.
+
+import { comm } from "./comment";
+
+//7. Вывести в массив массива тех комментариев, почта пользователей которых содержит ".com"
+
+const filtredComments = comments.filter((comment) => comment.email.includes('.com'));
+
+console.log('Покажи доменное имя с .com:', comComments);
+
+//8. Перебрать массив таким образом, чтобы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
+
+const updateComments = comments.map(comment => {
+  if (comment.id <= 5) {
+    return { ...comment, postId: 2 };
+  } else {
+    return { ...comment, postId: 1 };
+  }
+});
