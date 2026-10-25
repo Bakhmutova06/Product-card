@@ -68,9 +68,8 @@ const maxScene = [
   { name: "CharacterHighPoly", polyCount: 85000},
 ];
 
-maxScene.push(name: "CameraFront", polyCount: 0)
+maxScene.push({name: "CameraFront", polyCount: 0})
 console.log(maxScene.length)
-
 
 
 //8. Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной 
