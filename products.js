@@ -1,6 +1,5 @@
 export const productsCatalog = [
   {
-    id: 1,
     imageUrl:"images/photo.jpg",
     imageAlt:"Товар увлажняющий мусс",
     tag:"для нормальной кожи",
@@ -14,7 +13,6 @@ export const productsCatalog = [
     price: 2750
 },
   {
-    id: 2,
     imageUrl:"images/photo1.jpg",
     imageAlt:"Товар увлажняющая маска",
     tag:"для нормальной кожи",
@@ -28,7 +26,6 @@ export const productsCatalog = [
     price: 3500
 },
   {
-    id: 3,
     imageUrl:"images/photo2.jpg",
     imageAlt:"Товар гель для умывания",
     tag:"для нормальной кожи",
@@ -42,7 +39,6 @@ export const productsCatalog = [
     price: 1650
 },
   {
-    id: 4,
     imageUrl:"images/photo3.jpg",
     imageAlt:"Товар Подарочный набор №1",
     tag:"для нормальной кожи",
@@ -56,7 +52,6 @@ export const productsCatalog = [
     price: 4750
 },
   {
-    id: 5,
     imageUrl:"images/photo4.jpg", 
     imageAlt:"Товар Подарочный набор №5",
     tag:"для нормальной кожи",
@@ -87,13 +82,11 @@ productsCatalog.forEach((product) => {
   productList.appendChild(productClone)
 })
 
-const productsInfo = productsCatalog.reduce((accumulator, product) => {
-    accumulator[product.title] = {
-        price: product.price,
-        effect: product.effect
-    };
-
+export const productsInfo = productsCatalog.reduce((accumulator, product) => {
+  accumulator[product.title] = product.effect;
     return accumulator;
-}, {});
+  },
+    {}
+);
 
 console.log(productsInfo);

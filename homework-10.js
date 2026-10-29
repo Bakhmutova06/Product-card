@@ -1,29 +1,19 @@
 import { productsCatalog } from './products.js';
 
-function openProductsCatalog(){
-    const answer = confirm('Сколько карточек отобразить? От 1 до 5');
+function getCardsCount() {
+    const answer = prompt('Сколько карточек отобразить? От 1 до 5');
 
-    if (answer === true) {
-      window.open('http://google.com')
-    } else {
-      return;
+    if (answer === null) {
+        return 0;
     }
-  }
 
+    const count = Number(answer);
 
+    if (!Number.isInteger(count) || count < 1 || count > 5) {
+        alert('Введите целое число от 1 до 5');
+        return getCardsCount();
+    }
 
-const productsCatalog = './products.js';
-
-const inputProtection = card.includes(productsCatalog);
-
-if (inputProtection) {
-  console.log(`Да, проверка "${productsCatalog}" пройдена.`);
-} else {
-  console.log(`Нет, проверка"${productsCatalog}" не пройдена.`);
+    return count;
 }
-
-const data = prompt("Сколько карточек отобразить? (productsCatalog)")
-
-console.log(productsCatalog[data]);
-
 
