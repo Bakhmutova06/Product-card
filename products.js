@@ -42,7 +42,7 @@ export const productsCatalog = [
     imageUrl:"images/photo3.jpg",
     imageAlt:"Товар Подарочный набор №1",
     tag:"для нормальной кожи",
-    title:"Подарочный набор №1 ",
+    title:"Подарочный набор №1",
     effect:"Набор, состоящий из увлажняющего крема и маски",
     compound: [
       "воски",
@@ -71,13 +71,12 @@ const productList = document.getElementById('product-list');
 
 productsCatalog.forEach((product) => {
   const productClone = productTemplate.content.cloneNode(true);
-  productClone.querySelector('.products-id').textContent = product.id;
   productClone.querySelector('.products-imageUrl').src = product.imageUrl;
   productClone.querySelector('.products-imageUrl').alt = product.imageAlt;
   productClone.querySelector('.products-tag').textContent = product.tag;
   productClone.querySelector('.products-title').textContent = product.title;
   productClone.querySelector('.products-effect').textContent = product.effect;
-  productClone.querySelector('.products-compound').textContent = product.compound.join(', ');
+  productClone.querySelector('.products-compound').textContent = product.compound.join(',');
   productClone.querySelector('.products-price').textContent = product.price;
   productList.appendChild(productClone)
 })

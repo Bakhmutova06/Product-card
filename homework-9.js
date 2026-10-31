@@ -9,7 +9,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newArray = numbers.slice(4, 10)
 console.log(newArray)
 
-const fromFive = numbers.filter(num => num > 5);
+const fromFive = numbers.filter(num => num >= 5);
 console.log(fromFive);
 
 
@@ -57,20 +57,24 @@ console.log("Спальня:", bedroomFurniture);
 //Таким образом мы сможем внедрить переменную из comment.js в homework-9.js и работать с ней. 
 //Когда мы введем название переменной, мы предлагаем импортировать ее — так и делаем.
 
-import { comm } from "./comment";
+import { comm } from "./comment.js";
 
 //7. Вывести в массив массива тех комментариев, почта пользователей которых содержит ".com"
 
-const filtredComments = comments.filter((comment) => comment.email.includes('.com'));
+const filtredComments = comm.filter((comment) => 
+  comment.email.includes('.com'));
 
-console.log('Покажи доменное имя с .com:', comComments);
+console.log('Покажи доменное имя с .com:', filtredComments);
+
 
 //8. Перебрать массив таким образом, чтобы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-const updateComments = comments.map(comment => {
+const updateComments = comm.map(comment => {
   if (comment.id <= 5) {
     return { ...comment, postId: 2 };
   } else {
     return { ...comment, postId: 1 };
   }
 });
+
+console.log(updateComments);
