@@ -29,7 +29,7 @@
     <button id="change-color-first-card-button">Смена цвета первой карточки</button> 
     <button id="open-google">Переход на страницу Google</button> 
     <button id="output-console-log">Вывести сообщение в консоль лог</button>
-          </li>
+        </li>
         
           <div class="bg-flowers"></div>
         <li class="catalog__card">
@@ -121,11 +121,33 @@
             <button class="card__button">Купить</button>
         </div>
         </li>
-    </ul>
+    </ul> 
+    <ul id="product-list" class="catalog__products"></ul>
+    <template id="product-template">
+   
+      <li class="catalog__card">
+        <img class="products-imageUrl product__photo" src="" alt="">
+        <p class="products-tag card__tag"></p>
+        <p class="products-title card__title"></p>
+        <p class="products-effect card__effect"></p>
+
+        <span class="card__compound">Состав:</span>
+        <p class="products-compound card__list"></p>
+        <p class="products-price"></p>
+        <div class="card__price">
+            <b class="card__price-tag">Цена:</b>
+            <span class="products-price card__price-number"></span>
+            <button class="card__button">Купить</button>
+        </div>
+      </li>
+    </template>
+
     <script src="main.js"></script>
     <script src="addhwork6.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
     <script type="module" src="homework-9.js"></script>
+    <script type="module" src="homework-10.js"></script>
+    <script type="module" src="products.js"></script>
 </body>
 </html>
