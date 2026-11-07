@@ -20,7 +20,8 @@
 /* Исходное состояние заголовка (плавность переходов) */
 #active {
     transition: all 0.5s ease-in-out;
-    font-size: 32px;
+    font-size: 70px;
+    line-height: 78px;
 }
 
 /* Эффект для кнопки "Добавить оформление" */

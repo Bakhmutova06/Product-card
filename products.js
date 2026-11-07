@@ -66,20 +66,7 @@ export const productsCatalog = [
 }
   ]
 
-const productTemplate = document.getElementById('product-template');
-const productList = document.getElementById('product-list');
 
-productsCatalog.forEach((product) => {
-  const productClone = productTemplate.content.cloneNode(true);
-  productClone.querySelector('.products-imageUrl').src = product.imageUrl;
-  productClone.querySelector('.products-imageUrl').alt = product.imageAlt;
-  productClone.querySelector('.products-tag').textContent = product.tag;
-  productClone.querySelector('.products-title').textContent = product.title;
-  productClone.querySelector('.products-effect').textContent = product.effect;
-  productClone.querySelector('.products-compound').textContent = product.compound.join(',');
-  productClone.querySelector('.products-price').textContent = product.price;
-  productList.appendChild(productClone)
-})
 
 export const productsInfo = productsCatalog.reduce((accumulator, product) => {
   accumulator[product.title] = product.effect;
