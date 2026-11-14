@@ -19,6 +19,7 @@ function getCardsCount() {
 
 const cardsCount = getCardsCount();
 
+
 const selectedProducts = productsCatalog.slice(0, cardsCount);
 
 const productTemplate = document.getElementById('product-template');
@@ -28,7 +29,7 @@ const productList = document.getElementById('product-list');
 const productClone = productTemplate.content.cloneNode(true);
 });*/
 
-productsCatalog.forEach((product) => {
+selectedProducts.forEach((product) => {
   const productClone = productTemplate.content.cloneNode(true);
   productClone.querySelector('.products-imageUrl').src = product.imageUrl;
   productClone.querySelector('.products-imageUrl').alt = product.imageAlt;
