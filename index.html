@@ -9,20 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/title.css">
+    <link rel="stylesheet" href="style/hw6.css">
     <link rel="stylesheet" href="style/catalog__products.css">
     <link rel="stylesheet" href="style/catalog__card.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/position.css">
+    <link rel="stylesheet" href="style/modal.css">
 </head>
 <body>
-
+<header class="header">
+    <div class="header__content">
+        <img src="images/logo.png" alt="Product Cards" class="header__logo">
+        <button class="registration-button">Регистрация</button>
+    </div>
+</header>
   <div class="controls">
       <div class="control">
     <h1 id="active" class="title basic decorated">Выбери свой продукт</h1>
+    <div class="control-buttons">
     <button id="add" class="add">Добавить оформление</button>
     <button id="remove" class="remove">Убрать оформление</button>
     <button id="toggle" class="toggle">Красиво исчезнуть</button>
     <button id="reset" class="reset">Верни как было!</button>
     </div>
   </div>
+</div>
     <ul class="catalog__products">
         <li class="catalog__controls">
     <button id="change-color-all-cards-button">Смена цвета всех карточек</button> 
@@ -124,23 +135,87 @@
     </ul> 
     <ul id="product-list" class="catalog__products"></ul>
     <template id="product-template">
-   
-      <li class="catalog__card">
-        <img class="products-imageUrl product__photo" src="" alt="">
-        <p class="products-tag card__tag"></p>
-        <p class="products-title card__title"></p>
-        <p class="products-effect card__effect"></p>
-
-        <span class="card__compound">Состав:</span>
-        <p class="products-compound card__list"></p>
-        <p class="products-price"></p>
-        <div class="card__price">
-            <b class="card__price-tag">Цена:</b>
-            <span class="products-price card__price-number"></span>
-            <button class="card__button">Купить</button>
-        </div>
-      </li>
+        <li class="catalog__card">
+            <img class="products-imageUrl product__photo" src="" alt="">
+            <span class="products-tag card__tag"></span>
+            <h2 class="products-title card__title"></h2>
+            <p class="products-effect card__effect"></p>
+            <span class="card__compound">Состав:</span>
+            <ul class="products-compound card__list"></ul>
+            <div class="card__price">
+                <b class="card__price-tag">Цена:</b>
+                <span class="products-price card__price-number"></span>
+                <button class="card__button">Купить</button>
+            </div>
+        </li>
     </template>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <h2 class="footer__logo">Product Cards</h2>
+    
+                <p class="footer__description">
+                    У Нас Самые Лучшие Продукты Для Кожи!
+                </p>
+            <div class="footer__socials">
+                <a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">➤</a>
+                <a href="https://vk.ru/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">VK</a>
+            </div>
+            </div>
+            <div class="footer__subscribe">
+                <p class="footer__subscribe-title">
+                    Подпишись на наши акции:
+                </p>
+    
+                <form class="footer__form" id="email-form">
+                    <input type="email" name="email" placeholder="Введи Email..." required>
+                    <button type="submit">Подписаться</button>
+                </form>
+                <div class="modal">
+                    <div class="overlay"></div>
+                
+                    <div class="modal__content">
+                        <button class="modal__close">&times;</button>
+                
+                        <h2>Регистрация</h2>
+<form id="registration-form" novalidate>
+
+    <label for="first-name">Имя</label>
+    <input type="text" id="first-name" name="firstName" placeholder="Введите имя" required>
+
+    <label for="last-name">Фамилия</label>
+    <input type="text" id="last-name" name="lastName" placeholder="Введите фамилию" required>
+
+    <label for="birth-date">Дата рождения</label>
+    <input type="date" id="birth-date" name="birthDate" required>
+
+    <label for="login">Логин</label>
+    <input type="text" id="login" name="login" placeholder="Придумайте логин" minlength="3" required>
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password" placeholder="Придумайте пароль" minlength="6" required>
+
+    <label for="repeat-password">Повторите пароль</label>
+    <input type="password" id="repeat-password" name="repeatPassword" placeholder="Повторите пароль" required>
+
+    <button type="submit">Зарегистрироваться</button>
+
+</form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h3>Быстрые ссылки</h3>
+                <a href="#">Главная</a>
+                <a href="#">Магазин</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span class="footer__line"></span>
+            <p>www.product-cards.com © all right reserve</p>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
     <script src="addhwork6.js"></script>
@@ -148,6 +223,7 @@
     <script src="homework-8.js"></script>
     <script type="module" src="homework-9.js"></script>
     <script type="module" src="homework-10.js"></script>
+    <script type="module" src="homework-11.js"></script>
     <script type="module" src="products.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   padding: 25px;
   box-sizing: border-box;
   background-color: #F7F7FA;
-  list-style: none; /* Убираем маркеры списка li */
+  list-style: none;
   border: 1px solid #eaeaea;
   transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; /* Плавная смена цвета */
 }
