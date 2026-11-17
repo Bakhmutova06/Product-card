@@ -180,6 +180,3 @@ btnToggle.addEventListener('click', () => {
 btnReset.addEventListener('click', () => {
     title.classList.remove('decorated', 'hidden');
 });
-
-
-
