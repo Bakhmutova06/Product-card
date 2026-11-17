@@ -1,3 +1,93 @@
+//Домашнее задание №12
+import './comment.js';
+import './form.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './homework-10.js';
+import './homework-11.js';
+import './modal.js';
+import './products.js';
+
+import { Modal } from './modal.js';//Импортируем класс Modal для управления модальным окном.
+
+import { Form } from './form.js';//Импортируем класс Form для управления формами.
+
+const emailForm = new Form('email-form');//Создаём объект Form и передаём ID формы из HTML.
+
+//console.log(emailForm.getData());//Выводим данные формы в консоль.
+//console.log(emailForm.isValid());//Проверяем, правильно ли заполнена форма.
+
+
+//const emailForm = new Form('email-form');Создаём объект класса Form.Передаём ID нашей HTML-формы.
+
+emailForm.element.addEventListener('submit', (event) => {//Добавляем обработчик события отправки формы. emailForm.element — это сама HTML-форма.
+
+  event.preventDefault();//Отменяем стандартную отправку формы, чтобы браузер не перезагружал страницу.
+
+  if (!emailForm.isValid()) {//Проверяем правильность заполнения формы.Если проверка не пройдена...
+    return;//...прекращаем выполнение функции.
+  }
+
+  console.log(emailForm.getData());//Получаем данные формы через метод нашего класса и выводим их в консоль.
+
+  emailForm.reset();//После получения данных очищаем форму.
+});
+
+
+const modal = new Modal('registration-modal');//Создаём объект класса Modal. Передаём ID модального окна.
+
+//Находим кнопку регистрации.
+const registrationButton = document.querySelector('.registration-button');
+
+//При нажатии открываем модальное окно через метод класса Modal.
+registrationButton.addEventListener('click', () => {
+  modal.open();
+});
+
+//*Создаём объект класса Form для формы регистрации.*
+const registrationForm = new Form('registration-form');
+
+//*Добавляем обработчик отправки формы регистрации.*
+registrationForm.element.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  //*Получаем пароли из полей формы.*
+  const password = registrationForm.element.elements.password.value;
+  const repeatPassword = registrationForm.element.elements.repeatPassword.value;
+
+  //*Проверяем заполнение формы и совпадение паролей.*
+  if (!registrationForm.isValid() || password !== repeatPassword) {
+    alert('Регистрация отклонена. Проверьте правильность заполнения полей.');
+    return;
+  }
+
+  //*Получаем данные формы через метод класса Form.*
+  const data = registrationForm.getData();
+
+  //*Удаляем пароли из объекта с данными пользователя.*
+  delete data.password;
+  delete data.repeatPassword;
+
+  //*Добавляем дату регистрации.*
+  data.createdOn = new Date();
+
+  //*Сохраняем данные пользователя.*
+  let user = data;
+
+  console.log(user);
+
+  //*Закрываем модальное окно и очищаем форму.*
+  modal.close();
+  registrationForm.reset();
+});
+
+
+
+
+
+
+
 //Окрашивание всех карточек
 
 const catalogCards = document.querySelectorAll('.catalog__card');
@@ -90,3 +180,6 @@ btnToggle.addEventListener('click', () => {
 btnReset.addEventListener('click', () => {
     title.classList.remove('decorated', 'hidden');
 });
+
+
+
